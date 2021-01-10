@@ -1,4 +1,4 @@
-rootProject.name = 'parking'
+rootProject.name = 'parkingRental'
 
 include 'domain', 'presentation'
 include 'data'
