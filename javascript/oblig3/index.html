@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Task 1, 7 & 8</title>
+  </head>
+  <header>
+      <a href='index.html'>Task 1, 7 & 8</a>
+      <a href='t2.html'>Task 2</a>
+      <a href='t3.html'>Task 3</a>
+      <a href='t4.html'>Task 4</a>
+      <a href='t5.html'>Task 5</a>
+      <a href='t6.html'>Task 6</a>
+    </header>
+  <body>
+    <h1>Task 1</h1>
+    <p>
+      <ol>
+        <li> Task 2: Lage en funksjon for filopplastning ved bruk av addEventListener('change').</li>
+        <li> Task 3: Lage array av csv elementene, og oppdeling av elementene i csv filen for 
+             hver '\n' og ',' ved å bruke split(). </li>
+        <li> Task 4.1: Lage en funksjon som finner alle de unike elementene i tredje kolonne av 
+             arrayen, og returnere hvor mange ulike byer arrayen inneholder. 
+             Usikker på hvilke metoder som må brukes for å oppnå dette. Må google en del.</li>
+        <li> Task 4.2: Lage en funksjon som finner alle de unike elementene i andre kolonne av 
+             arrayen, og returnere hvor mange ulike transaksjonstyper arrayen inneholder. 
+             Usikker på hvilke metoder som må brukes for å oppnå dette. Må google en del.</li>
+        <li> Task 4.3.1: Lage en for loop der verdien av alle elementene i den fjerde kolonnen av arrayen
+             legges sammen og returneres som et tall. Må nok lage en variabel med 0 i verdi og bruke 
+             variabel += for at den legger sammen verdien av alle elementene den looper over i den fjerde kolonnen.
+             Må nok bruke return i funksjonen for å returnere verdien av loopen.</li>
+        <li> Task 4.3.2: Samme som forrige oppgave, men må også dele totalsummen på antall elementer. 
+             Må nok dele variabelen som har totalsummen er lagret i med array.length, 
+             siden dette er lengden på arrayen/antall elementer i arrayen.</li>
+        <li> Task 4.3.3: Lage en for loop som går gjennom hvert element i fjerde feltet av arrayen og
+             returnerer den med høyest verdi. Vet at Math.max kan brukes til dette.</li>
+        <li> Task 4.3.4: Lage en for loop som går gjennom hvert element i fjerde feltet av arrayen og
+             returnerer den med lavest verdi. Vet at Math.min kan brukes til dette.</li>
+        <li> Task 4.4: Trekke sluttdato fra startdate ved å hente inn første og siste rad i den første
+             kolonnene av arrayen. For å hente første kan jeg bruke array[0], og array[array.length-1] for det siste.
+             Lagre disse to ulike datoene i to variabler og trekke de fra hverandre. 
+        </li>
+        <li> Task 5: Vet ikke hvordan dette gjøres siden jeg aldri har laget tabeller før, må googles en del. 
+             Må nok ta i bruk for loop for å sende elementene fra arrayen til tabellen.</li> 
+        <li> Task 6: Vet ikke hvordan dette gjøres siden jeg aldri har laget tabeller før, må googles en del. 
+             Må nok ta i bruk for loop for å sende elementene fra arrayen til tabellen.</li>
+      </ol>
+    </p>
+    <br>
+    <br>
+    <h1>Task 7</h1>
+    <p>
+      <ol>
+        <li> Task 3: Den første oppdelingen var enkel ved å bare bruke split(), 
+             men en for loop måtte brukes for den andre delingen. Resultatet av andre oppdelingen ble en 2d array.</li>
+        <li> Task 4.1: Måtte lage en ny tom array tottrans som de unike elementene ble sendt til ved hjelp av es6 built in objects new Set() og
+             Array.from(). Måtte lagre alle elementene i den tredje kolonnen av arrayen i den nye tomme arrayen tottrans ved å bruke en for loop.
+             Så brukte jeg Array.from(new Set(tottrans)) som lager en string ut av de unike elementene til arrayen tottrans og som lager en array 
+             av stringen som så lagres i tottrans.</li>
+        <li> Task 4.2: Måtte lage en ny tom array totloc som de unike elementene ble sendt til ved hjelp av es6 built in objects new Set() og
+             Array.from(). Måtte lagre alle elementene i den andre kolonnen av arrayen i den nye tomme arrayen totloc ved å bruke en for loop.
+             Så brukte jeg Array.from(new Set(totloc)) som lager en string ut av de unike elementene til arrayen totloc og som lager en array 
+             av stringen som så lagres i totloc.</li>
+        <li> Task 4.3.1: Lagde en for loop der verdien av alle elementene i den fjerde kolonnen av arrayen
+             ble lagt sammen. Måtte lage en variabel med 0 i verdi og bruke variabel += for at den lå 
+             sammen verdien av alle elementene den loopet over i den fjerde kolonnen av arrayen.
+             Måtte bruke return i funksjonen for å returnere verdien av loopen.</li>
+        <li> Task 4.3.2: Samme som forrige oppgave, men måtte også dele totalsummen på antall elementer. 
+             Måtte dele variabelen som totalsummen var lagret i, på array.length.</li>
+        <li> Task 4.3.3: Kunne ikke bruke Math.max siden det ikke funker på 2d array. Lagde en loop som gikk gjennom alle elementene og endrer 
+             verdien til variabelen max til det tallet den loopet over, så en if statement som sjekket om hvert tall var større enn verdien til variabelen max.
+             Til slutt returnerte den det tallet som var størst.</li>
+        <li> Task 4.3.4: Kunne ikke bruke Math.min siden det ikke funker på 2d array. Lagde en loop som gikk gjennom alle elementene og endrer 
+             verdien til variabelen min til det tallet den loopet over, så en if statement som sjekket om hvert tall var mindre enn verdien til variabelen min.
+             Til slutt returnerte den det tallet som var minst.</li>
+        <li> Task 4.4: For å hente første dato brukte jeg array[0], og array[array.length-1] for det siste. Måtte bruke getTime() for å regne ut tidsforskjellen.
+             Verdien kom ut i millisekunder så jeg måtte dele det på antall millisekunder i et døgn for å få antall dager.</li>
+        <li> Task 5: Hentet inn tabellen med id table fra html filen ved å bruke document.getElementById. 
+             Så en loop som lagde antall rader (16). Lagde variabelen row = insertRow() som legger til ny rad (<tr>), knyttet til variabelen table og lagde 16 rader.
+             Så en "nested" loop som hentet inn alle elementene til hver eneste rad.
+             Så insertCell() som legger til felter (<td>) i alle radene (<tr>), knyttet til variabelen row, feltene inneholder dataen fra array[j] som er alle elementene i arrayen.
+             Skrev ut alle radene (<tr>) og feltene (<td>) med elementene fra arrayen ved å bruke cell.innerHTML = array[i][j].</li> 
+        <li> Task 6: Lagde variabelen table som hentet inn tabellraden med id data fra html ved å bruke document.getElementById.
+             Så en loop som itererte gjennom arrayen med dataen som tabellen skulle inneholde. 
+             Så skrives alle elementene i tabellfelt. Skriver <td> (lage nytt felt), skriver alle elementene i stats arrayen (stats[i]) inn i feltet som lages og til slutt skrives </td> som lukker feltet.
+
+        </li>
+      </ol>
+    </p>
+    <br>
+    <br>
+    <h1>Task 8</h1>
+    <p>
+      Veldig usikker. Må sammenligne input verdi fra brukeren med array elementene for å sjekke om de matcher og vise alle matchene. Vet ikke hvordan dette gjøres.
+    </p>
+    <br>
+    <br>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+@mixin body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: $fontsizelaptop;
+}
+
+@mixin maingridlaptop {
+  display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: "header header"
+                       "content sidebar"
+                       "footer footer";
+}
+
+@mixin header {
+  display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	background-image: url(header.jpg);
+	background-size: 100% 100%;
+	white-space: nowrap;
+	h1 {
+		grid-column: 2;
+		color: $h1headercolor;
+		position: relative;
+		top: 50%;
+	}
+}
+
+@mixin nav {
+  grid-row: 3;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	z-index: 1;
+	overflow: hidden;
+	line-height: 280%;
+	background-color: $navcolor;
+	overflow-x: hidden;
+	color: white;
+	ul {
+		display: none;
+		list-style: none;
+		text-decoration: none;
+		font-style: normal;
+	}
+	input {
+		display: none;
+	}
+	li {
+		list-style: none;
+		text-decoration: none;
+		font-style: normal;
+		a {
+			list-style: none;
+			text-decoration: none;
+			font-style: normal;
+		}
+		>a {
+			&:hover {
+				text-decoration: none;
+			}
+			display: inline-block;
+			width: 100%;
+		}
+	}
+	a {
+		list-style: none;
+		text-decoration: none;
+		font-style: normal;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@mixin hjem {
+	float: left;
+	width: 50%;
+}
+
+@mixin ddmenu {
+  background-color: $ddcolor;
+  line-height: 280%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+@mixin ddcontent {
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	input {
+		&:checked {
+			&~ul {
+				display: block;
+			}
+		}
+	}
+}
+
+@mixin menu {
+	&:checked {
+		&~.ddmenu {
+			display: block;
+		}
+	}
+}
+
+@mixin label {
+	&:hover {
+		cursor: pointer;
+	}
+	display: block;
+	list-style: none;
+	text-decoration: none;
+	font-style: normal;
+}
+
+@mixin content {
+	min-height: 65vh;
+	grid-area: content;
+	display: flex;
+	flex-direction: column;
+	padding: 4vh 4vw;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@mixin lesmer {
+	background-color: $lesmercolor;
+	border: none;
+	color: white;
+	padding: 0.5vh 1vw;
+	font-style: normal;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin sidebar {
+	grid-area: sidebar;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: min-content min-content min-content;
+	grid-row-gap: 4vh;
+	padding: 4vw;
+	background-color: $asidecolor;
+}
+
+@mixin gitbtn {
+	grid-column: 2;
+	grid-row: 1;
+	background-color: $gitbtncolor;
+	border: none;
+	color: white;
+	padding: 1.5vh 3.5vw;
+	font-style: normal;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin iframe-container {
+	grid-row: 2;
+	grid-column: 1 / -1;
+	padding-top: 56.25%;
+	position: relative;
+	iframe {
+		border: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+@mixin links {
+	grid-row: 3;
+	grid-column: 1 / -1;
+}
+
+@mixin img {
+	width: 100%;
+	height: auto;
+}
+
+@mixin figcaption {
+	font-size: 85%;
+	font-style: italic;
+}
+
+@mixin article {
+	ul {
+		li {
+			text-align: left;
+			margin-bottom: 2vh;
+		}
+		margin-bottom: 5vh;
+		margin-top: 5vh;
+	}
+}
+
+@mixin footer {
+	grid-area: footer;
+	color: white;
+	background-color: $footercolor;
+	min-height: 5vh;
+}
+
+@mixin a {
+	text-decoration: none;
+	color: inherit;
+	font-style: italic;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@mixin maingridother {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header"
+                       "content"
+                       "sidebar"
+                       "footer";
+}

@@ -1,0 +1,18 @@
+//fontrelated
+$h2headercolor: Maroon;
+$font: Arial, Helvetica, sans-serif;
+$fontsizelaptop: calc(0.3em + 1vw);
+$fontsizeother: calc(0.7em + 1vw);
+
+//colors
+$navcolor: navy;
+$ddcolor: #4b4848;
+$asidecolor: DarkRed;
+$btncolor: blue;
+$footercolor: goldenrod;
+
+//media queries
+$ipadpro: "(width: 1366px) and (height: 1024px)";
+$galaxytab: "(width: 1280px) and (height: 800px)";
+$phones: "(max-width: 1024px)";
+

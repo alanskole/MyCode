@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="none">
+	<meta charset="UTF-8">
+	<title>Microdata example</title>
+	<link rel="icon" href="icon.png">
+</head>
+<body>
+	<header>
+		<h2>Microdata</h2>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="organization.html">organization example</a></li>
+			<li><a href="recipe.html">soup recipe example</a></li>
+			<li><a href="event.html">event example</a></li>
+			<li><a href="movie.html">movie example</a></li>
+		</ul>
+	</nav>
+	<article>
+		<section itemscope itemtype="https://schema.org/Person">
+			<h2 itemprop="name">Stephen Hawking</h2>
+			<figure>
+				<img itemprop="image" src="person.jpg"/>
+				<figcaption>Picture of Stephen Hawking</figcaption>
+			</figure>
+			<p>Stephen <span itemprop="additionalName">William</span> Hawking <span itemprop="awards">CH CBE FRS FRSA</span>
+				was an <span itemprop="jobTitle">English theoretical physicist, cosmologist, and author who was director of
+					research at the Centre for Theoretical Cosmology at the University of Cambridge</span> at the time of his
+				death.</p>
+			<p>Born: <span itemprop="birthDate">January 8, 1942</span>, <span itemprop="birthPlace">Oxford, United Kingdom</span></p>
+			<p>Died: <span itemprop="deathDate">March 14, 2018</span>, <span itemprop="deathPlace">Cambridge, United Kingdom</span></p>
+			<p>Children: <span itemprop="children">Lucy Hawking, Robert Hawking, Timothy Hawking</span></p>
+			<p>Spouse: <span itemprop="spouse">Elaine Mason</span> (m. 1995–2006), <span itemprop="spouse">Jane Hawking</span>(m. 1965–1995)</p>
+		</section>
+	</article>
+</body>
+</html>

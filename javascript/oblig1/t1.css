@@ -1,0 +1,19 @@
+header {
+  position:absolute; top:8px; left:8px;
+}
+
+body {
+  background-color: #468bfa;
+  color: #fff;
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 100px;
+}

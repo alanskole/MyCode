@@ -1,0 +1,49 @@
+@page {
+  margin: 6mm auto;
+}
+
+header, .sidebar, footer, .lesmer, form, iframe, video {
+  display: none;
+}
+
+body {
+  font: 13pt Georgia, Times, serif;
+  line-height: 1.3;
+  background: white;
+  color: black;
+  text-align: center;  
+}
+
+h3, h4, h5, h6 {
+  page-break-inside: avoid;
+}
+
+h3, h4, h5, h6 ::after {
+  height: 100px;
+  margin-bottom: -95px;
+}
+
+p {
+  page-break-inside: avoid;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  text-align: left;
+  page-break-inside: avoid;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  font-size: 85%;
+  font-style: italic;
+  page-break-inside: avoid;
+}

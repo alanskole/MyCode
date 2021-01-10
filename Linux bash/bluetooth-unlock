@@ -1,0 +1,38 @@
+#!/bin/bash
+while :
+do
+  myvar=1
+  sudo hcitool cc 74:59:09:14:55:33 2> /dev/null
+  bt=$(sudo hcitool rssi 74:59:09:14:55:33 2> /dev/null)
+  
+  end=$((SECONDS+2))
+  
+  while [ $SECONDS -lt $end ]; do
+     if [ "$bt" != "RSSI return value: 0" ]; then
+        myvar=0
+     fi      
+      :
+  done
+  if [[ $myvar -eq 1 ]]; then
+     sudo loginctl unlock-sessions
+     sleep 2
+     sudo killall bluetooth-unlock
+  fi
+done
+
+
+#TIMER=0
+#while :
+#do
+#  sudo hcitool cc 74:59:09:14:55:33 2> /dev/null
+#  bt=$(sudo hcitool rssi 74:59:09:14:55:33 2> /dev/null)
+#  if [ "$bt" == "RSSI return value: 0" ] && [ $TIMER == 2 ]; then
+#     sudo loginctl unlock-sessions
+#     sleep 2
+#     sudo killall bluetooth-unlock
+#  elif [[ ! "$bt" == "RSSI return value: 0" ]]; then
+#    ((TIMER=0))
+#  fi
+#  sleep 1
+#  ((TIMER++))
+#done

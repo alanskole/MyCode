@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="none">
+	<meta charset="UTF-8">
+	<title>Microdata example</title>
+	<link rel="icon" href="icon.png">
+</head>
+<body>
+	<header>
+		<h2>Microdata</h2>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="recipe.html">soup recipe example</a></li>
+			<li><a href="person.html">person example</a></li>
+			<li><a href="event.html">event example</a></li>
+			<li><a href="movie.html">movie example</a></li>
+		</ul>
+	</nav>
+	<section itemscope itemtype="http://schema.org/Organization">
+		<p>Organisasjonsnavn: <span itemprop="name">Høgskolen i Østfold</span></p>
+		<section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<p>Adresse:<span itemprop="streetAddress">B R A Veien 4</span>,
+				<span itemprop="postalCode">1757</span>
+				<span itemprop="addressLocality">Halden</span>,
+				<span itemprop="addressRegion">Østfold</span>,
+				<span itemprop="addressCountry">Norge</span>
+			</p>
+		</section>
+		<p>Telefon: <span itemprop="telephone">69608000</span></p>
+		<p>Epost: <span itemprop="email">postmottak@hiof.no</span></p>
+		<p>Faks: <span itemprop="faxNumber">69608001</span></p>
+		<section itemscope itemtype="http://schema.org/CivicStructure">
+			<meta itemprop="openingHours" content="Mo-Fr 08:00-15:45">Åpningstider: Man-Fre 08:00 - 15:45
+		</section>
+		<p>Etablert: <meta itemprop="foundingDate" content="1994-08-01">01.08.1994</p>
+		<p>Ansatte: <span itemprop="numberOfEmployees">620</span></p>
+	</section>
+</body>
+</html>

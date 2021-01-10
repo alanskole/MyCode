@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="none">
+	<meta charset="UTF-8">
+	<title>Microdata example</title>
+	<link rel="icon" href="icon.png">
+</head>
+<body>
+	<header>
+		<h2>Microdata</h2>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="organization.html">organization example</a></li>
+			<li><a href="recipe.html">soup recipe example</a></li>
+			<li><a href="person.html">person example</a></li>
+			<li><a href="movie.html">movie example</a></li>
+		</ul>
+	</nav>
+	<article>
+		<section itemscope itemtype="http://schema.org/Event">
+			<figure>
+				<img itemprop="image" src="event.jpeg" alt="Event"/>
+				<figcaption>Bare å glede seg til eksamen!</figcaption>
+			</figure>
+			<h1 itemprop="name">Eksamen i Webutvikling</h1>
+			<p>What to expect: <span itemprop="description">Det er en fantastisk dag med EKSAMEN i favorittfaget til alle, Webutvikling! Oppmøte er et must! Møt opp eller STRYK.
+				Ta med masse god Webutvikling-kunnskap. De fire beste timene i livet ditt.</span></p>
+			<p>Performers: <span itemprop="performer">DEG</span>!</p>
+			<p>When: <time itemprop="startDate" datetime="2019-11-25T09:00">25.11.2019, klokken 09:00</time>-<time
+					itemprop="endDate" datetime="2019-11-25T13:00">13:00</time>
+				<p><section itemprop="location" itemscope itemtype="http://schema.org/Place">Where: <span itemprop="name">Høgskolen i Østfold</span>,
+						<section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+							<span itemprop="streetAddress">B R A Veien 4</span>,
+							<span itemprop="postalCode">1757</span> <span itemprop="addressLocality">Halden</span>,
+							<span itemprop="addressRegion">Østfold</span>.
+						</section>
+					</section>
+				</p>
+		</section>
+	</article>
+</body>
+</html>

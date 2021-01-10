@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/</loc>
+  <lastmod>2019-11-05T20:02:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/index.html</loc>
+  <lastmod>2019-11-05T20:02:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/html-skjema.html</loc>
+  <lastmod>2019-11-05T20:02:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/medietyper.html</loc>
+  <lastmod>2019-11-05T20:02:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/css-layouts.html</loc>
+  <lastmod>2019-11-05T20:02:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/video-audio.html</loc>
+  <lastmod>2019-11-05T20:02:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/responsiv-design.html</loc>
+  <lastmod>2019-11-05T20:02:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/sass.html</loc>
+  <lastmod>2019-11-05T20:02:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/seo.html</loc>
+  <lastmod>2019-11-05T20:02:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/sosial.html</loc>
+  <lastmod>2019-11-05T20:02:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://itstud.hiof.no/~aland/webutvikling/oblig4/mikrodata.html</loc>
+  <lastmod>2019-11-05T20:02:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>

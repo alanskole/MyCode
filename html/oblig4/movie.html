@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="robots" content="none">
+	<meta charset=utf-8>
+	<title>Microdata example</title>
+	<link rel="icon" href="icon.png">
+</head>
+<body>
+	<header>
+		<h2>Microdata</h2>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="organization.html">organization example</a></li>
+			<li><a href="recipe.html">soup recipe example</a></li>
+			<li><a href="person.html">person example</a></li>
+			<li><a href="movie.html">movie example</a></li>
+		</ul>
+	</nav>
+	<article>
+		<section itemscope itemtype="http://schema.org/Movie">
+			<h1 itemprop="name">Ghost Dog: The Way of the Samurai (<span itemprop="datePublished">2001</span>)</h1>
+			<figure>
+				<img itemprop="image" src="movie.jpeg" alt="Movie">
+				<figcaption>Filmplakat.</figcaption>
+			</figure>
+			  <p itemprop="description">An African-American Mafia hit man who models himself after the samurai of old finds himself targeted for death by the mob.</p>		
+				<p>Runtime: <span itemprop="duration">116</span> minutes.</p>
+				<p>Director: <span itemprop="director">Jim Jarmusch</span></p>
+				<p>Procucer: <span itemprop="productionCompany">Pandora Filmproduktion</span>, <span itemprop="productionCompany">Arbeitsgemeinschaft der öffentlich-rechtlichen Rundfunkanstalten der Bundesrepublik Deutschland (ARD)</span>, <span itemprop="productionCompany">Degeto Film</span></p>
+				<p><section itemprop="musicBy" itemscope itemtype="http://schema.org/Person">Music: <span itemprop="name">RZA</span></section></p>
+				<ul>
+					<li itemprop="actor">Forest Whitaker as Ghost Dog</li>
+					<li itemprop="actor">John Tormey as Louie</li>
+					<li itemprop="actor">Cliff Gorman as Sonny Valerio</li>
+					<li itemprop="actor">Henry Silva as Ray Vargo</li>
+				</ul>
+				<p>Genre: <span itemprop="genre">Action, Crime, Drama</span></p>
+				<p>Motion Picture Rating (MPAA): <span itemprop="contentRating">R</span></p>
+		</section>
+	</article>
+</body>
+</html>

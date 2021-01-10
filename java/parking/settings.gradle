@@ -1,0 +1,6 @@
+rootProject.name = 'parking'
+
+include 'domain', 'presentation'
+include 'data'
+include 'service'
+

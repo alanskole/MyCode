@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ObservationRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-10T18:53:04" hostname="princesslighty-WRT-WX9" time="0.043">
+  <properties/>
+  <testcase name="getObservationFromMapByIdTest()" classname="ObservationRepositoryTest" time="0.032"/>
+  <testcase name="getAllObservationsAsArraylistTest()" classname="ObservationRepositoryTest" time="0.002"/>
+  <testcase name="getAnimalFromObservationTest()" classname="ObservationRepositoryTest" time="0.002"/>
+  <testcase name="updateObservationTest()" classname="ObservationRepositoryTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

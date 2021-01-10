@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="utf8">
+    <script src="/webjars/vue/2.6.10/dist/vue.min.js"></script>
+    @componentRegistration
+</head>
+<style>
+    template {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        text-decoration: none;
+        color: darkgray;
+    }
+
+    a {
+        color:inherit;
+        text-decoration: none;
+    }
+
+    .flex-container {
+        display: flex;
+        background-color: dimgrey;
+        text-align: center;
+        flex-direction: column;
+        margin: 2vw;
+        width: 40vw;
+        padding: 2vw;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    .flex-container:hover{
+        background-color: darkolivegreen;
+    }
+
+    .flex-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: darkgray;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .navbutton {
+        text-align: center;
+        color: black;
+    }
+
+    .navbutton a:hover {
+        color: dodgerblue;
+    }
+
+    .linkbutton {
+        background-color: lightsteelblue;
+        color: black;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .linkbutton:hover {
+        background-color: cornflowerblue;
+    }
+
+    input[type=submit] {
+        border: none;
+        background-color: lightsteelblue;
+        color: black;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+         background-color: cornflowerblue;
+     }
+
+</style>
+<body>
+<main id="main-vue" v-cloak>
+    @routeComponent
+</main>
+<script>
+    new Vue({el: "#main-vue"});
+</script>
+</body>
+</html>

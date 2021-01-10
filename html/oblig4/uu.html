@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="stil.css" media="screen">
+    <link rel='stylesheet' href="normalize.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
+    <title>Universell utforming</title>
+    <link rel="icon" href="icon.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a id="skip" href="#content">Skip to main content</a>
+        <h2>UU</h2>
+        <nav>
+          <a class="hjem" href="index.html">Home</a>
+          <input type="checkbox" id="menu" />
+          <label for="menu">&#9776;</label>
+          <div class="ddmenu">
+            <div class="ddcontent">
+              <input type="checkbox" id="A" />
+              <label for="A">Oblig 2</label>
+              <ul>
+                <li><a href="html-skjema.html">HTML-Skjema</a></li>
+                <li><a href="medietyper.html">Medietyper</a></li>
+                <li><a href="css-layouts.html">CSS Layouts</a></li>
+              </ul>
+            </div>
+            <div class="ddcontent">
+              <input type="checkbox" id="B" />
+              <label for="B">Oblig 3</label>
+              <ul>
+                <li><a href="video-audio.html">Audio og Video i HTML</a></li>
+                <li><a href="responsiv-design.html">Responsiv Design</a></li>
+                <li><a href="sass.html">SASS</a></li>
+              </ul>
+            </div>
+            <div class="ddcontent">
+              <input type="checkbox" id="C" />
+              <label for="C">Oblig 4</label>
+              <ul>
+                <li><a href="seo.html">SEO</a></li>
+                <li><a href="uu.html">UU</a></li>
+                <li><a href="sosial.html">Sosiale Medier</a></li>
+                <li><a href="mikrodata.html">Microdata</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main id="content">
+        <article>
+          <h1>Universell Utforming</h1>
+          <section>
+            <p>Jeg måtte endre bakgrunns- og tekstfargene på aside og footer, i tillegg til bakgrunnsfargen til menyelementene for å få kontraster som er godkjente.
+              Aside (.sidebar) bakgrunnsfargen byttet jeg fra indianred til darkred, og tekstfargen fra svart til hvit.
+              Footer bakgrunnsfargen byttet jeg fra darkred til goldenrod, og tekstfargen fra hvit til svart.
+              Menyelementenes (.ddmenu) bakgrunnsfarge endret jeg fra grey til #4b4848.
+            </p>Jeg laget en skip to main content link som er usynlig når den ikke er fokusert på.
+              Når man trykker på tab knappen ser man linken som kan klikkes for å hoppe rett til hovedinnholdet på siden.
+              Jeg flyttet aside under main i HTML koden slik at brukere slipper å tabbe gjennom hele aside for å komme til main,
+              det er også mulig å bruke tabindex, men det var lettere å bare flytte aside under main i HTML
+            <p>
+            </p>Jeg har sørget for at alle medieelementene mine har alt tekster, og iframe har titler for å optimere siden til bruk av skjermlesere.
+              I tillegg la jeg også til aria-label="" til hvert input element i HTML skjemafeltene slik at skjermlesere kan
+              lese id'en til hvert felt til brukere som benytter skjermlesere.
+            <p>
+            </p>
+          </section>
+        </article>
+      </main>
+      <aside class="sidebar">
+        <a class="gitbtn" href ="https://www.google.com/search?ei=0CiGXYCHGeTirgTz4JOoAg&q=site%3Agithub.com&oq=site%3Agithub.com&gs_l=psy-ab.3...1634.2260..2641...0.0..0.168.405.1j2......0....1..gws-wiz._TWnnIBywsk&ved=0ahUKEwiAr5jiheLkAhVksYsKHXPwBCUQ4dUDCAo&uact=5">GitHub</a>
+        <div class="iframe-container">
+          <iframe title="Morten Rand-Hendriksen: CSS Grid Changes Everything (About Web Layouts)" src="https://www.youtube.com/embed/txZq7Laz7_4" allowfullscreen></iframe>
+        </div>
+        <div class="links">
+          <p><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design – What It Is And How To Use It</a></p>
+          <p><a href="https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/">Look Ma, No Media Queries! Responsive Layouts Using CSS Grid</a></p>
+          <p><a href="https://envato.com/blog/css3-flexbox/">Understanding CSS3 Flexbox for Responsive Design</a></p>
+          <p><a href="https://comingsoonwp.com/flexbox-and-css-grid/">Responsive Web Design: All You Need to Know About Flexbox and CSS Grid</a></p>
+          <p><a href="https://hankchizljaw.com/wrote/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/">Create a responsive grid layout with no media queries, using CSS Grid</a></p>
+        </div>
+      </aside>
+      <footer class="footer">
+        <p>Alan Dana Omar, <a href="mailto:aland@hiof.no">aland@hiof.no</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

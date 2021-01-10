@@ -1,0 +1,3 @@
+lab.c contains the main function. The commands in the main calls the print_message(); from message.h, which is imported with the #include command at the top. It returns zero since it doesn't return any value, just runs a function.
+
+Fixed the smash stacking detected error by making i smaller than length instead of smaller than or equal to in the first for loop of the program, from for(i=0; i<=length; i++) to for(i=0; i<length; i++). The error is caused by an index overflow because it tries to write to an illegal memory location of its stack.

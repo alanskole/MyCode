@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil.css">
+    <link rel='stylesheet' href="normalize.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <title>Responsiv design</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>RESPONSIV DESIGN</h1>
+        <nav>
+          <a class="hjem" href="index.html">Home</a>
+          <input type="checkbox" id="menu" />
+          <label for="menu">&#9776;</label>
+          <div class="ddmenu">
+            <div class="ddcontent">
+              <input type="checkbox" id="A" />
+              <label for="A">Oblig 2</label>
+              <ul>
+                <li><a href="html-skjema.html">3: HTML-Skjema</a></li>
+                <li><a href="medietyper.html">4: Medietyper</a></li>
+                <li><a href="css-layouts.html">5: CSS Layouts</a></li>
+              </ul>
+            </div>
+            <div class="ddcontent">
+              <input type="checkbox" id="B" />
+              <label for="B">Oblig 3</label>
+              <ul>
+                <li><a href="video-audio.html">2: Audio og Video i HTML</a></li>
+                <li><a href="responsiv-design.html">3: Responsiv Design</a></li>
+                <li><a href="sass.html">4: SASS</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <aside class="sidebar">
+        <a class="gitbtn" href ="https://www.google.com/search?ei=0CiGXYCHGeTirgTz4JOoAg&q=site%3Agithub.com&oq=site%3Agithub.com&gs_l=psy-ab.3...1634.2260..2641...0.0..0.168.405.1j2......0....1..gws-wiz._TWnnIBywsk&ved=0ahUKEwiAr5jiheLkAhVksYsKHXPwBCUQ4dUDCAo&uact=5">GitHub</a>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/txZq7Laz7_4" allowfullscreen></iframe>
+        </div>
+        <div class="links">
+          <p><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/">Responsive Web Design – What It Is And How To Use It</a></p>
+          <p><a href="https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/">Look Ma, No Media Queries! Responsive Layouts Using CSS Grid</a></p>
+          <p><a href="https://envato.com/blog/css3-flexbox/">Understanding CSS3 Flexbox for Responsive Design</a></p>
+          <p><a href="https://comingsoonwp.com/flexbox-and-css-grid/">Responsive Web Design: All You Need to Know About Flexbox and CSS Grid</a></p>
+          <p><a href="https://hankchizljaw.com/wrote/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/">Create a responsive grid layout with no media queries, using CSS Grid</a></p>
+        </div>
+      </aside>
+      <main class="content">
+        <section>
+          <article>
+            <h1>Responsiv Design</h1>
+            <p>At webdesign er responsivt betyr at den kan vises på ulike skjermstørrelser ved at innholdet tilpasses til skjermens viewport.
+              Dette gjøres som regel ved at innholdet strekkes, krympes eller flyttes rundt for et godt tilpasset resultat. 
+              Responsiv design har blitt et viktig aspekt i webutvikling grunnet alle de ulike enhetene som brukes av brukere. 
+              Det er mange ulike skjermtyper og størrelser ute på markedet, i motsetning til før da alle brukte desktop for å surfe på nettet.
+              Riktig bruk av responsiv design fører til god brukervennlighet ved at brukere slipper å for eksempel scrolle sidelengs hvis en 
+              nettside besøkes på mindre skjermer som mobiler og nettbrett. Det høres kanskje litt dumt ut å bruke så mye tid og energi på redesigne 
+              nettsider bare for at folk skal slippe å scrolle sidelengs, men dagens brukere er kresne og late spesielt når det finnes mange
+              alternativer som har responsive nettsider. Dessuten er det viktikg å ha responsive sider når det kommer til søkemotoroptimalisering!
+            </p>
+            <figure>
+              <img src="resp.png" alt="slik fungerer responsiv design">
+              <figcaption>Slik fungerer responsiv design.</figcaption>
+            </figure>
+            <p>En ting som er greit å vite om skjermer er at oppløsning og viewport ikke er helt det samme når det kommer til visning av innhold. 
+              Oppløsningen er antall piksler på skjermen, og selv om skjermer har lik størrelse betyr det ikke at oppløsningen er lik! 
+              Viewport er en nedskalert del av oppløsningen og er den faktiske størrelsen i nettleseren, altså antall piksler i nettleservinduet.
+              Samtidig er det viktig å tenke på at mobile enheter som kan roteres og settes i landskapsmodus vil ha to ulike viewports 
+              for landskaps- og portrettmodus!
+            </p>
+            <figure>
+              <img src="resp2.png" alt="vanligste oppløsningene, og hva viewport er">
+              <figcaption>De vanligste oppløsningene og hva viewport er.</figcaption>
+            </figure>
+            <h4>Media query</h4>
+            <p>CSS media query brukes for nettopp dette med responsivitet av nettsider, der man selv velger når og hvordan siden endres.
+              Det er kun stilen som forandres uten å gjøre endringer i innholdet. "Mobile-first" er den beste metoden å følge ved webdesing, 
+              der man først begynner å designe nettsider til mobilskjermer og skalere opp senere. Dette er fordi mobiler krever mer tilpasning 
+              enn datamaskiner som et resultat av mindre skjermstørrelse og berøringsskjerm i stedet for klikk med mus. 
+              Ved bruk av media querries må &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; inkluderes i &lt;head&gt; 
+              av hver side for at det skal fungere.
+            </p>
+            <figure>
+              <img src="resp6.png" alt='&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;'>
+              <figcaption>Hva elementene i &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; betyr.</figcaption>
+            </figure>
+            <p>Man kan enten ha flere ulike CSS filer for hver enkelte media querie og lenke till alle i toppen av HTML koden til hver side, 
+              eller ha alle de ulike reglene i samme CSS og spesifisere ved hvilke breakpoints de ulike reglene skal aktiveres. 
+              Breakpoints er det punktet der CSS reglene for media queries skal aktiveres.
+              Med punkt så menes det antall piksler, altså størrelsen, for eksempel "width: 1200px" der breakpointet er ved en bredde å 1200px.
+              Er det ønskelig å ha separate CSS filer for ulike media queries må de lenkes ved å inkludere 
+              &lt;link rel='stylesheet' media='screen and (min-width: 701px) and (max-width:900px)' href='css/medium.css' /&gt;, 
+              der CSS filen medium.css brukes i tilfeller der viewporten har en bredde på mellom 701-900px. 
+              Her må man endre på bredden, eventuelt høyden og kilden til CSS filen for hver unike media query. 
+              Skal alle de ulike regelsettene være i samme CSS fil må man spesifisere dette i CSS ved å skrive 
+              @media screen and (min-width: 600px) { ... }, der i dette tilfellet reglene vil gjelde for alle skjermer med en
+              viewport bredde på minst 600px.
+              Det er to ulike måter å bestemme når media queries skal aktiveres der den første er ved å spesifisere
+              skjermoppløsningen på enheten, eller den beste metoden der det er skjermens viewport som bestemmer.
+              I koden er forskjellen at "device" må inkluderes hvis man er ute etter skjermens oppløsningen, 
+              så for eksempel er "max-device-width" maks skjermoppløsning mens "max-width" er maks viewport bredde.
+            </p>
+            <figure>
+              <img src="resp3.png" alt="slik skrives media queries i CSS">
+              <figcaption>Slik ser media queries ut i CSS.</figcaption>
+            </figure>
+            <figure>
+              <img src="resp4.png" alt="resultat av media query">
+              <figcaption>Målet/resultatet ved bruk av media query.</figcaption>
+            </figure>
+            <h4>Medietyper</h4>
+            <p>Medietyper i CSS betyr at stilen kan tilpasses etter hvilken type medieenhet HTML blir vist på, som for eksempel en 
+              TV, ulike skjermer, ark, talesynteser etc.
+              Disse kan legges til via et eget CSS stilark og lenkes til HTML på samme måten som den vanlige CSS-filen legges til.
+              Derimot må det legges til en "media=''" innenfor "&lt;link&gt;" taggen som for eksempel 
+              "&lt;link rel="stylesheet" href="print.css" media="print"&gt;" hvis det er et medietypen print det gjelder.
+              En annen metode er å bruke "media rules" som legges til direkte i hoved-CSS eller HTML som gjøres ved hjelp av 
+              "@media" for å spesifisere medietypen reglene skal gjelde for.
+              Grunnet et mer oversiktlig resultat anbefales det å lage separate stilark for ulike medietyper. 
+              CSS har ulike medietyper, men de som er relevante nå til dags er all, print, screen, speech.
+              Her er alle de tilgjengelige medietypene i CSS:
+            </p>
+            <ul>
+              <li>"all": denne gjelder for alle enheter, og inkluderer ikke egendefinerte instillinger for spesifikke enheter. 
+                Hoved-CSS filen er regnet som "all".</li>
+              <li>"aural": brukt for talesynteser, men har blitt erstattet av medietypen "speech" fra CSS 2.1.</li>
+              <li>"braille": medietype for punktskrift på touchscreen med taktil feedback for synshemmede personer.</li>
+              <li>"embossed": punktskriftprintere for blindeskrift som skriver ut taktile ark.</li>
+              <li>"handheld": er ment for håndholdte enheter med små skjerm. Var en popular medietype før, derimot brukt lite 
+                nå for tiden på grunn av responsiv design.</li>
+              <li>"print": brukes for utskrift slik at kun ønsket innhold fra nettsiden printes.
+                Uønskede deler av nettsiden kan skjules slik at unødvendig materiale som er uegnet for utskrift kan ekskluderes 
+                fra utskriften, som for eksempel video, meny, animasjon, footer, header.
+                Samtidig kan en rekke andre ting endres for å unngå unødvendig bruk av fargetoner og for en bedre leseopplevelse,
+                som for eksempel endring av font, skriftstørrelse, farge på tekst og bakgrunn, linjehøyde, papirstørrelse etc.</li>
+              <li>"projection": beregnet for visningsmodus, for eksempel projiserte presentasjoner.</li>
+              <li>"screen": stilark primært tiltenkt skjermer på desktop PC, men har i senere år blitt vanlig til både mobil og tablet.
+                Dette er den mest vanlige medietypen siden alt utenom speech og print er ment for visning på skjerm.</li>
+              <li>"speech": erstattet "aural" fra og med CSS 2.1. Sette regler for hvordan skjermlesere leser innhold på skjermen for svaksynte,
+                men benyttes også for lydbøker. Har blitt viktig å implementere grunnet mennesker med svekket synsfunksjoner.
+                Medietypen kan gjøre spesifikke endringer på for eksmepel stemmer, lyder og intonasjoner for å optimalisere 
+                lytteopplevelsen siden browserne talesynteser ikke alltid er optimale.
+                Aural box model brukes til å ha pauser mellom lesningen slik at leserne får med seg mest mulig av innholdet.
+                Voice family, voice balance, voice pitch, voice volume i CSS kan endres slik som for eksempel tekst endres av CSS.</li>
+              <li>"tty": for medier hvor hvert tegn har samme bredden, for eksempel gamle TV-skjermer og terminaler.</li>
+              <li>"tv": beregnet for TV'er.</li>
+            </ul>
+            <h4>Responsive Typography</h4>
+            <p>For at nettsider skal være responsive er det også essensielt med "responsive typography",
+              som gjør at teksten opp- eller nedskaleres på ulike skjermstørrelser.
+              Slik at vi for eksempel slipper at overskrifter skal være digre på mindre skjermer,
+              og at et ord dekker hele bredden, eller at ord deles opp grunnet plassmangel.
+              Måleenheten px er ikke relativ så den skaleres ikke opp eller ned når skjermstørrelsen endres, og må derfor ungås!
+              Derimot er disse måleenhetene responsive:
+            </p>
+            <ul>
+              <li>em: Element size. Basert på fontstørrelsen av elementet det brukes på. Å angi fontstørrelse i em kan blir rotete.</li>
+              <li>rem: Root element size. Basert på fontstørrelsen av rotelementet (&lt;html&gt;). 
+                For eksempel Hvis HTML har en fontstørrelse på 16px er 10rem = 10x16=160px.
+                Å angi fontstørrelse i rem er enklere, men krever mer tilpasning i media queries for et godt resultat på ulike skjermer.</li>
+              <li>vw: Viewport width (bredden av tilgjengelig nettleservindu). 1vw = 1/100 av tilgjengelig nettleservindu. Å angi fontstørrelse i vw er responsivt, 
+                men blir veldig lite på små skjermer og veldig stort på store skjermer.</li>
+              <li>vh: Viewport height (høyden av tilgjengelig nettleservindu).</li>
+            </ul>
+            <p>Best practise er å angi en basis fontstørrelse i HTML ved å ta i bruk en utregning basert på standard fontstørrelse i nettleseren + viewport bredden, 
+              og eventuelt bruke rem for å angi fontstørrelser på ulike tekstelementer som for eksempel ulike overskrifter.
+              Hvis nettleserens fontstørrelse er standard som er 16px, og viewport bredden er 1000px, 
+              vil utregningen i eksempelet over bli slik: 1em = 16px, 1vw = 1/100 viewport bredde (1000px) = 1000px/100=10px, fontstørrelse = 16px+10px=26px. 
+              Nedskaleres nettleseren til en viewport bredde på 800px, får vi regnestykket: 1em = 16px, 1vw = 1/100 viewport bredde (800px) = 800/100=8px fontstørrelse = 16px+8px=24px.
+            </p>
+            <figure>
+              <img src="resp5.png" alt="responsiv tekst">
+              <figcaption>Responsiv tekst best practise. Hvordan responsive fonter funker.</figcaption>
+            </figure>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>Alan Dana Omar, <a href="mailto:aland@hiof.no">aland@hiof.no</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
