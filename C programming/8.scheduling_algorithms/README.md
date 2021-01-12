@@ -1,0 +1,1 @@
+The only code that is mine is in prio.c (priority algorithm), srt.c (shortest time remaining algorithm) and rr.c (round robin algorithm with quantum of 1 second); The code in fcfs.c, scheduling.c and scheduling.h is written by my teacher.
