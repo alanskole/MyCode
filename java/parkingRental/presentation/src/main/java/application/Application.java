@@ -29,6 +29,7 @@ public class Application {
 
         app.get("/bsch/:lotid", new VueComponent("search"));
         app.get("/bsch/search/result", new VueComponent("result"));
+        app.get("/bsch/search/result/alltypes", new VueComponent("result-alltypes"));
 
         app.get("/bookings", new VueComponent("all-bookings"));
         app.get("/bookings/ownedspots", new VueComponent("ownedspots-bookings"));
@@ -61,6 +62,7 @@ public class Application {
         app.get("api/bsch/:lotid", context -> bookingScheduleController.getBookingScheduleCtr(context));
         app.post("/bsch/api/:lotid", context -> bookingScheduleController.getOnlyAvailableCtrlPost(context));
         app.get("/bsch/api/result", context -> bookingScheduleController.getOnlyAvailableCtrlGet(context));
+        app.get("/bsch/api/result/alltypes", context -> bookingScheduleController.getOnlyAvailableAllTypesCtrlGet(context));
         app.get("api/bsch/:lotid/delete", context -> bookingScheduleController.deleteBookingScheduleCtr(context));
 
         app.post("/bsch/search/booking/book/:lotid/:userid", context -> bookingController.bookCtr(context));

@@ -18,6 +18,11 @@ public class BookingScheduleService implements IBookingScheduleService {
     }
 
     @Override
+    public InterfaceCrud<BookingSchedule> getInterfaceCrudSchedule() {
+        return interfaceCrudSchedule;
+    }
+
+    @Override
     public BookingSchedule getOnlyAvailable() {
         return onlyAvailable;
     }
@@ -124,7 +129,7 @@ public class BookingScheduleService implements IBookingScheduleService {
 
         ConcurrentSkipListMap<String, Boolean> availableDateAndTime = new ConcurrentSkipListMap<>();
 
-        typeChecker(type, parkinglotid, schedule, listOfDates, availableDateAndTime);
+        getOnlyAvailBasedOnType(type, parkinglotid, schedule, listOfDates, availableDateAndTime);
 
         onlyAvailable = new BookingSchedule();
         //set the parkinglot of bookingschedule schd to the current parkinglot
@@ -160,23 +165,7 @@ public class BookingScheduleService implements IBookingScheduleService {
         }
     }
 
-    private void typeChecker(TYPE type, int parkinglotid, TreeMap<Parkingspot, ConcurrentSkipListMap<String, Boolean>> schedule, ArrayList<String> listOfDates, ConcurrentSkipListMap<String, Boolean> availableDateAndTime) throws Exception {
-        if (type == null)
-            getOnlyAvailAllTypes(parkinglotid, schedule, listOfDates, availableDateAndTime);
-        else
-            getOnlyAvailOneType(type, parkinglotid, schedule, listOfDates, availableDateAndTime);
-    }
-
-    private void getOnlyAvailAllTypes(int parkinglotid, TreeMap<Parkingspot, ConcurrentSkipListMap<String, Boolean>> schedule, ArrayList<String> listOfDates, ConcurrentSkipListMap<String, Boolean> availableDateAndTime) throws Exception {
-        Iterator<Parkingspot> iterator = getBookingScheduleByIdService(parkinglotid).getSchedule().keySet().iterator();
-        while (iterator.hasNext()) {
-            //spot is set to be the current parkingspot
-            Parkingspot spot = iterator.next();
-            findAvailable(parkinglotid, schedule, listOfDates, availableDateAndTime, spot);
-        }
-    }
-
-    private void getOnlyAvailOneType(TYPE type, int parkinglotid, TreeMap<Parkingspot, ConcurrentSkipListMap<String, Boolean>> schedule, ArrayList<String> listOfDates, ConcurrentSkipListMap<String, Boolean> availableDateAndTime) throws Exception {
+    public void getOnlyAvailBasedOnType(TYPE type, int parkinglotid, TreeMap<Parkingspot, ConcurrentSkipListMap<String, Boolean>> schedule, ArrayList<String> listOfDates, ConcurrentSkipListMap<String, Boolean> availableDateAndTime) throws Exception {
         Iterator<Parkingspot> iterator = getBookingScheduleByIdService(parkinglotid).getSchedule().keySet().iterator();
         while (iterator.hasNext()) {
             //spot is set to be the current parkingspot

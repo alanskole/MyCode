@@ -25,6 +25,7 @@ public class BookingScheduleTest {
     ConcurrentSkipListMap<String, Boolean> availableDateAndTime = new ConcurrentSkipListMap<>();
     String searchDate;
     int hoursToSearchFor = 3;
+    BookingScheduleServiceAllTypes bookingScheduleServiceAllTypes;
 
     @BeforeAll
     void before() throws Exception {
@@ -32,6 +33,7 @@ public class BookingScheduleTest {
         c = tf.iBookingScheduleService.getClass();
         parkinglot2 = tf.iParkinglotService.createParkingLotService(new Location("s", "s", 2, 2, "f"), tf.user);
         searchDate = dateFormat.format(DateCheckerService.addHoursToAnyTime(new Date(), 1));
+        bookingScheduleServiceAllTypes = new BookingScheduleServiceAllTypes(tf.iBookingScheduleService.getInterfaceCrudSchedule());
     }
 
     @BeforeEach
@@ -75,29 +77,24 @@ public class BookingScheduleTest {
     }
 
     @Test
-    void getOnlyAvailAllTypesPrivateMethod() throws Exception {
-        Method m = c.getDeclaredMethod("getOnlyAvailAllTypes", int.class, TreeMap.class, ArrayList.class, ConcurrentSkipListMap.class);
-
-        m.setAccessible(true);
+    void getOnlyAvailBasedOnTypeTest() throws Exception {
+        Method m = c.getMethod("getOnlyAvailBasedOnType", TYPE.class, int.class, TreeMap.class, ArrayList.class, ConcurrentSkipListMap.class);
 
         assertEquals(0, availableDateAndTime.size());
         assertEquals(0, schedule.size());
-        m.invoke(tf.iBookingScheduleService, tf.parkinglot.getId(), schedule, listOfDates, availableDateAndTime);
+        m.invoke(tf.iBookingScheduleService, TYPE.Regular, tf.parkinglot.getId(), schedule, listOfDates, availableDateAndTime);
         assertNotEquals(0, availableDateAndTime.size());
         assertNotEquals(0, schedule.size());
     }
 
     @Test
-    void getOnlyAvailOneTypePrivateMethod() throws Exception {
-        Method m = c.getDeclaredMethod("getOnlyAvailOneType", TYPE.class, int.class, TreeMap.class, ArrayList.class, ConcurrentSkipListMap.class);
+    void getOnlyAvailableMapReturnsDifferentWhenDifferentInstanceUsed() throws Exception {
+        tf.iParkingspotService.createParkingspot(tf.parkinglot.getId(), TYPE.Truck);
 
-        m.setAccessible(true);
-
-        assertEquals(0, availableDateAndTime.size());
-        assertEquals(0, schedule.size());
-        m.invoke(tf.iBookingScheduleService, tf.spot1.getType(), tf.parkinglot.getId(), schedule, listOfDates, availableDateAndTime);
-        assertNotEquals(0, availableDateAndTime.size());
-        assertNotEquals(0, schedule.size());
+        assertEquals(
+            tf.iBookingScheduleService.getOnlyAvailableMap(tf.parkinglot.getId(), dateFormat.format(tf.bkdate), 3, TYPE.Regular).getSchedule().size()  * 2,
+            bookingScheduleServiceAllTypes.getOnlyAvailableMap(tf.parkinglot.getId(), dateFormat.format(tf.bkdate), 3, TYPE.Regular).getSchedule().size()
+        );
     }
 
     @Test
